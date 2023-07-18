@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    public float speed = 1f;
-    float v;
-    float h;
+    Rigidbody2D body;
 
-    // Start is called before the first frame update
+    float horizontal;
+    float vertical;
+
+    public float runSpeed = 20.0f;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        body = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        v = Input.GetAxisRaw("Vertical");
-        h = Input.GetAxisRaw("Horizontal");
-        //rb.AddForce(new Vector2(h * speed, v * speed));
-        rb.velocity = new Vector2 (h * speed, v * speed);
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
+    }
+
+    private void FixedUpdate()
+    {
+        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
 }
