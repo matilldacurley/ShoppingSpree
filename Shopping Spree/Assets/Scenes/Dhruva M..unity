@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &610916102 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4886427708529101134, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+  m_PrefabInstance: {fileID: 114076374245602112}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1666409227
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +185,7 @@ GameObject:
   - component: {fileID: 1968709036}
   - component: {fileID: 1968709035}
   - component: {fileID: 1968709038}
+  - component: {fileID: 1968709039}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -273,6 +279,19 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!114 &1968709039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968709034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f72e2d79c5e204cb2ab11959283c8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 610916102}
 --- !u!1 &2024448640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,6 +2753,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -13, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 24
+      m_TileSpriteIndex: 24
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -12, y: 1, z: 0}
     second:
       serializedVersion: 2
@@ -2984,6 +3013,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -13, y: 2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 24
+      m_TileSpriteIndex: 24
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -12, y: 2, z: 0}
     second:
       serializedVersion: 2
@@ -3229,6 +3268,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 0
       m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -13, y: 3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 24
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4464,6 +4513,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 0e08a510f776b4e7fa6fa9eb806a95e8, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: c598bf0470a2b48879cbbd60be70627e, type: 2}
+  - m_RefCount: 3
+    m_Data: {fileID: 11400000, guid: 48eb9fe1d75f64178bcf8e82e6cc506a, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 357
     m_Data: {fileID: -22267377, guid: a6fd7da057c7d40b098d966142393e95, type: 3}
@@ -4513,8 +4564,10 @@ Tilemap:
     m_Data: {fileID: 541505480, guid: a6fd7da057c7d40b098d966142393e95, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 2127971996, guid: a6fd7da057c7d40b098d966142393e95, type: 3}
+  - m_RefCount: 3
+    m_Data: {fileID: 1269968511, guid: a6fd7da057c7d40b098d966142393e95, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 405
+  - m_RefCount: 408
     m_Data:
       e00: 1
       e01: 0
@@ -4533,7 +4586,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 405
+  - m_RefCount: 408
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4632,6 +4685,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6798834145470211424, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
       propertyPath: m_UseFullKinematicContacts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7192300075490578738, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+      propertyPath: baseRunSpeed
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
