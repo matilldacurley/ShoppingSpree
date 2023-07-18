@@ -10,7 +10,7 @@ public class CustomerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wantItem = Random.Range(0, items.length - 1);
+        wantItem = Random.Range(0, items.Length - 1);
     }
 
     // Update is called once per frame
