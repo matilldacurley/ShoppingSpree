@@ -5306,7 +5306,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -6538,25 +6538,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 610916102}
---- !u!1 &2126763744 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4814215867258798800, guid: 92bd286de08f30d4182b31013ae8b4a8, type: 3}
-  m_PrefabInstance: {fileID: 4814215867828651176}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2126763749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126763744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48f9a749e47387b449e88226afba4b13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletTarget: {x: 0, y: 0, z: 0}
-  bulletSpeed: 1.25
 --- !u!1001 &114076374245602112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6705,6 +6686,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -302367620751960179, guid: 92bd286de08f30d4182b31013ae8b4a8, type: 3}
+      propertyPath: bulletSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4814215867258798800, guid: 92bd286de08f30d4182b31013ae8b4a8, type: 3}
       propertyPath: m_Name
       value: Item1
