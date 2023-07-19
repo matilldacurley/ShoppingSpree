@@ -14,6 +14,7 @@ public class PlayerControllerExperiment : MonoBehaviour
     public float cartSpeed = 2.5f;
     public Vector3 bulletTarget;
     public bool isThrown = false;
+    public bool isCarting = false;
 
     void Start()
     {
@@ -29,10 +30,12 @@ public class PlayerControllerExperiment : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
+            isCarting = true;
             runSpeed = cartSpeed;
         }
         if(Input.GetKeyUp(KeyCode.LeftShift))
         {
+            isCarting = false;
             runSpeed = baseRunSpeed;
         }
         if(Input.GetMouseButtonDown(0))
