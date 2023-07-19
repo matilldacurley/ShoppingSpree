@@ -7,6 +7,7 @@ public class PlayerControllerExperiment : MonoBehaviour
     public static PlayerControllerExperiment PCE;
     private Rigidbody2D rb;
     private GameObject Item;
+    public GameObject spawnPoint;
     private float horizontal;
     private float vertical;
     public float baseRunSpeed = 1f;
@@ -42,10 +43,11 @@ public class PlayerControllerExperiment : MonoBehaviour
         {
             if(Item != null)
             {
-                bulletTarget = spawnpos;
+                bulletTarget = new Vector3(spawnpos.x, spawnpos.y, 0);
                 isThrown = true;
                 Item.SetActive(true);
-                GameObject o = Instantiate(Item, new Vector3(spawnpos.x, spawnpos.y, 0), Item.transform.rotation);
+                GameObject o = Instantiate(Item, spawnPoint.transform.position, Item.transform.rotation);
+                o.GetComponent<SpriteRenderer>().enabled = true;
                 o.GetComponent<ItemController>().bulletTarget = new Vector3(spawnpos.x, spawnpos.y, 0);
             }
             else
@@ -71,6 +73,8 @@ public class PlayerControllerExperiment : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Item = other.gameObject;
-         Item.SetActive(false);
+        //Item.SetActive(false);
+        other.GetComponent<SpriteRenderer>().enabled = false;
     }
+
 }
