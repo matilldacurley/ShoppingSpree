@@ -16,9 +16,20 @@ public class SpawnPoint : MonoBehaviour
 		transform.position = new Vector3(player.transform.position.x, player.transform.position.y + pivotOffset, 0);
 		mousepos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
 		objectpos = Camera.main.WorldToScreenPoint(new Vector3(target.position.x, target.position.y, 0));
-		mousepos.x = mousepos.x - objectpos.x;
-		mousepos.y = mousepos.y - objectpos.y;
-		angle = Mathf.Atan2(mousepos.y, mousepos.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+		Vector2 n = Camera.main.ScreenToWorldPoint(mousepos);
+		float dist = Vector3.Distance(n, player.transform.position);
+		if (dist <= 1f)
+		{
+			transform.rotation = Quaternion.Euler(0,0,360 - Mathf.Abs(transform.rotation.z));
+			target.position = Camera.main.ScreenToWorldPoint(mousepos);
+			target.position = new Vector3(target.position.x, target.position.y, 0);
+		}
+        else
+        {
+			mousepos.x = mousepos.x - objectpos.x;
+			mousepos.y = mousepos.y - objectpos.y;
+			angle = Mathf.Atan2(mousepos.y, mousepos.x) * Mathf.Rad2Deg;
+			transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+		}
 	}
 }
