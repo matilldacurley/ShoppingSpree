@@ -12,7 +12,7 @@ public class ItemController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        bulletTarget = (PlayerControllerExperiment.PCE.bulletTarget - PlayerControllerExperiment.PCE.spawnPoint.transform.position).normalized;
+        bulletTarget = (PlayerControllerExperiment.PCE.bulletTarget - PlayerControllerExperiment.PCE.transform.position).normalized;
     }
 
     // Update is called once per frame
