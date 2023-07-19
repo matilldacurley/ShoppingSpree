@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &106811707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4886427708529101134, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+  m_PrefabInstance: {fileID: 1071370962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &242417507
 GameObject:
   m_ObjectHideFlags: 0
@@ -4664,6 +4669,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -507200632081287550, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+      propertyPath: m_Size.x
+      value: 0.08582316
+      objectReference: {fileID: 0}
+    - target: {fileID: -507200632081287550, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+      propertyPath: m_Size.y
+      value: 0.031228453
+      objectReference: {fileID: 0}
+    - target: {fileID: -507200632081287550, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0010486394
+      objectReference: {fileID: 0}
+    - target: {fileID: -507200632081287550, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.13628691
+      objectReference: {fileID: 0}
     - target: {fileID: 4886427708529101134, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4839,6 +4860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1558686704}
+  - component: {fileID: 1558686706}
   - component: {fileID: 1558686703}
   - component: {fileID: 1558686702}
   - component: {fileID: 1558686705}
@@ -4935,6 +4957,19 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!114 &1558686706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558686701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f72e2d79c5e204cb2ab11959283c8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 106811707}
 --- !u!1 &1817456567
 GameObject:
   m_ObjectHideFlags: 0
