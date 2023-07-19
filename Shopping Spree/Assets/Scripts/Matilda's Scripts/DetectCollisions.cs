@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+    public int value = 10;
+    public GameObject player;
+
     // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter(Collider other)
     {
-        
+        player = GameObject.Find("CustomerSpawn");
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
+    
 }

@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd5a0c73270b4e6abd96f472678f4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 3
+  runSpeed: 1
 --- !u!1 &242417507
 GameObject:
   m_ObjectHideFlags: 0
@@ -8105,7 +8105,7 @@ PrefabInstance:
       objectReference: {fileID: 1657830402}
     - target: {fileID: 7192300075490578738, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
       propertyPath: baseRunSpeed
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
@@ -8359,11 +8359,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98c11b552d544fb6bda1f29dd99c707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 556036233440425101, guid: 9b38cc5b42b784eeaafb7d9d8e0eb3f3, type: 3}
   spawnRange: 9
   enemyCount: 0
   waveNumber: 1
-  spawnPos: {fileID: 0}
+  spawnPos: {fileID: 1302334882}
 --- !u!4 &1328074052
 Transform:
   m_ObjectHideFlags: 0

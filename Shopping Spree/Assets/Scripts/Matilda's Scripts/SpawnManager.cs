@@ -9,6 +9,7 @@ public class SpawnManager : MonoBehaviour
     public int enemyCount;
     public int waveNumber = 1;
     public Transform spawnPos;
+
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class SpawnManager : MonoBehaviour
 
     // Update is called once per frame
     
+
     void Update()
     {
         enemyCount = FindObjectsOfType<Enemy>().Length;
@@ -36,6 +38,7 @@ public class SpawnManager : MonoBehaviour
         {         
             waveNumber++;
             SpawnEnemyWave(waveNumber);
+            
         }
     }
 
