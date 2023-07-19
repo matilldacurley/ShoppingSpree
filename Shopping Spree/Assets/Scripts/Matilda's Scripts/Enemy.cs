@@ -7,11 +7,13 @@ public class Enemy : MonoBehaviour
     public GameObject player;
     private Rigidbody2D rb;
     public float speed = 0.5f;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -19,6 +21,15 @@ public class Enemy : MonoBehaviour
     {
         Vector2 lookDirection = (player.transform.position - transform.position).normalized;
 
-        rb.AddForce(lookDirection * speed);
+        rb.velocity = (lookDirection * speed);
+       
+        if (rb.velocity != Vector2.zero)
+        {
+            anim.SetBool("isMoving", true);
+        }
+        else if (rb.velocity == Vector2.zero)
+        {
+            anim.SetBool("isMoving", false);
+        }
     }
 }
