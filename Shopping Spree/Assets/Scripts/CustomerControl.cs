@@ -14,6 +14,7 @@ public class CustomerControl : MonoBehaviour
     {
         wantItem = Random.Range(0, 3 - 1);
         bar.SetActive(true);
+        wantItem = Random.Range(0, items.Length - 1);
     }
 
     // Update is called once per frame
