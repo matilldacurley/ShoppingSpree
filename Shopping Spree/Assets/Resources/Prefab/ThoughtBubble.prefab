@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2712077235812438174}
   - component: {fileID: 2712077235812438161}
   - component: {fileID: 2712077235812438160}
+  - component: {fileID: 674296880896071643}
   m_Layer: 0
   m_Name: ThoughtBubble
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 856157554, guid: bc9eeea871dc67146ba7f2121dc2a758, type: 3}
+  m_Sprite: {fileID: 1379492654, guid: 8113a0975f43c114bbb0d90049c5432f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 2712077235812438163}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e455b16757fc38f49a65a8104488dd0e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 18b552efbe094cd4d9e944f17265628e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -106,3 +107,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &674296880896071643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2712077235812438163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586549936304cfc44b1245c050f92022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 4814215867258798800, guid: 92bd286de08f30d4182b31013ae8b4a8, type: 3}
