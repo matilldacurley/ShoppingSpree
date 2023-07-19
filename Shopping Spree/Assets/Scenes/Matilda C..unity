@@ -467,6 +467,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4886427708529101134, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
   m_PrefabInstance: {fileID: 114076374245602112}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1210303390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210303383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd5a0c73270b4e6abd96f472678f4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runSpeed: 3
 --- !u!1 &1259098200
 GameObject:
   m_ObjectHideFlags: 0
@@ -9312,6 +9325,10 @@ PrefabInstance:
     - target: {fileID: -507200632081287550, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
       propertyPath: m_Offset.y
       value: -0.1381992
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076027724399803688, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4886427708529101134, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
       propertyPath: m_Name
