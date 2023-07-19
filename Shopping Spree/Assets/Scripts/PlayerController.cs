@@ -35,9 +35,11 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("isMoving", true);
         }
-        else
+        else if (body.velocity == Vector2.zero)
         {
             anim.SetBool("isMoving", false);
+            
         }
+   
     }
 }
