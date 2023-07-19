@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TextController : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     private bool isGameActive = false;
     public GameObject titleScreen;
