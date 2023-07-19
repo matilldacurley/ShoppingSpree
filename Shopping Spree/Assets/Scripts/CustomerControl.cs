@@ -22,9 +22,9 @@ public class CustomerControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.tag == wantItem.tag)
+        if (col.gameObject.tag == wantItem.tag)
         {
-            Destroy(col);
+            Destroy(col.gameObject);
         }
     }
 
