@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6657120598443274130}
   - component: {fileID: -507200632081287550}
   - component: {fileID: 6798834145470211424}
+  - component: {fileID: 3076027724399803688}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -47,8 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79e42e3af07f1743907e5fb0bcd576b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  throwPoint: {fileID: 0}
   baseRunSpeed: 20
   cartSpeed: 2.5
+  bulletSpeed: 0.75
 --- !u!212 &6657120598443274130
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -148,3 +151,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &3076027724399803688
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4886427708529101134}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 009be3e83819147189d2811567325233, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
