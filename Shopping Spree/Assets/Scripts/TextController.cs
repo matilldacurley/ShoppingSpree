@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class TextController : MonoBehaviour
 {
-    private bool isGameActive;
+    private bool isGameActive = false;
     public GameObject titleScreen;
     // Start is called before the first frame update
     void Start()
     {
-        isGameActive = false;
         titleScreen.SetActive(true);
     }
 
@@ -17,7 +16,7 @@ public class TextController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             isGameActive = true;
             titleScreen.SetActive(false);
