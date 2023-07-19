@@ -5,12 +5,12 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public GameObject player;
-    private Rigidbody rb;
+    private Rigidbody2D rb;
     public float speed = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
     }
 
