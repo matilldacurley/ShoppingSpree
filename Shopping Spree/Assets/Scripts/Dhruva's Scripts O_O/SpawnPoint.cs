@@ -10,6 +10,8 @@ public class SpawnPoint : MonoBehaviour
 	Vector3 objectpos;
 	float angle;
 	public float pivotOffset = -0.135f;
+	public float distNeeded = 0.75f;
+	public float offset = .1f;
 
 	void Update()
 	{
@@ -18,11 +20,12 @@ public class SpawnPoint : MonoBehaviour
 		objectpos = Camera.main.WorldToScreenPoint(new Vector3(target.position.x, target.position.y, 0));
 		Vector2 n = Camera.main.ScreenToWorldPoint(mousepos);
 		float dist = Vector3.Distance(n, player.transform.position);
-		if (dist <= 1f)
+		if (dist <= distNeeded)
 		{
 			transform.rotation = Quaternion.Euler(0,0,360 - Mathf.Abs(transform.rotation.z));
-			target.position = Camera.main.ScreenToWorldPoint(mousepos);
-			target.position = new Vector3(target.position.x, target.position.y, 0);
+			Vector2 dir = (n - new Vector2(transform.position.x, transform.position.y)).normalized;
+			//transform.position = new Vector3(player.transform.position.x, player.transform.position.y + pivotOffset, 0);
+			target.localPosition = dir * offset;
 		}
         else
         {

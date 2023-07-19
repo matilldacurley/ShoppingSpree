@@ -4821,8 +4821,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 62ce01ddca719d34ea9648c586a7cc94, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6683,6 +6683,8 @@ MonoBehaviour:
   target: {fileID: 1152870249}
   player: {fileID: 610916108}
   pivotOffset: -0.135
+  distNeeded: 0.75
+  offset: 0.5
 --- !u!1 &1968709034
 GameObject:
   m_ObjectHideFlags: 0
