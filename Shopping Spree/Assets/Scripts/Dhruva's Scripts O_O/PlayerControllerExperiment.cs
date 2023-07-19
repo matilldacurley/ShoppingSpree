@@ -5,11 +5,14 @@ using UnityEngine;
 public class PlayerControllerExperiment : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private GameObject Item = null;
+    public GameObject throwPoint;
     private float horizontal;
     private float vertical;
     public float baseRunSpeed = 1f;
     private float runSpeed;
     public float cartSpeed = 2.5f;
+    public float bulletSpeed = 0.75f;
     
     void Start()
     {
@@ -29,10 +32,26 @@ public class PlayerControllerExperiment : MonoBehaviour
         {
             runSpeed = baseRunSpeed;
         }
+        if(Input.GetMouseButtonDown(0))
+        {
+            if(Item != null)
+            {
+                Instantiate(Item, throwPoint.transform.position, Item.transform.rotation);
+            }
+            else
+            {
+                print("You Suck!");
+            }
+        }
     }
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        print("Picked Up!");
     }
 }
