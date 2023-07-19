@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2933145c9c3f3294aa427a23699b1ae0
+guid: bc9eeea871dc67146ba7f2121dc2a758
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,85 +105,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MiniOldWoman_0
+      name: 183_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 129
-        width: 10
-        height: 14
+        x: 0
+        y: 0
+        width: 45
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 349eaf7e7a6e2d64989ae80870b3cbed
-      internalID: -793126734
+      spriteID: 6dce2413991270c44b97cb56d4355dc9
+      internalID: 1379492654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MiniOldWoman_1
+      name: 183_3
       rect:
         serializedVersion: 2
-        x: 43
-        y: 129
-        width: 10
-        height: 13
+        x: 138
+        y: 0
+        width: 46
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c364b9652230ace4a9e3d4e28f4b6a9d
-      internalID: -2147250780
+      spriteID: 5377084ed76e1204897be72b60db9258
+      internalID: 856157554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MiniOldWoman_2
+      name: 183_1
       rect:
         serializedVersion: 2
-        x: 75
-        y: 129
-        width: 10
-        height: 13
+        x: 45
+        y: 0
+        width: 46
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7251f853769061c41827d58df20cde8d
-      internalID: -618940250
+      spriteID: 704ec4b7603b1194aa81b89d7fd7fe2d
+      internalID: -258112128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MiniOldWoman_3
+      name: 183_2
       rect:
         serializedVersion: 2
-        x: 107
-        y: 129
-        width: 10
-        height: 14
+        x: 91
+        y: 0
+        width: 46
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e5d74aa8838d75498a5026b2c9caa8d
-      internalID: -968884558
+      spriteID: d4dbd858423fa304787c3d855e032bbf
+      internalID: 1444800243
       vertices: []
       indices: 
       edges: []
@@ -199,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MiniOldWoman_0: -793126734
-      MiniOldWoman_1: -2147250780
-      MiniOldWoman_2: -618940250
-      MiniOldWoman_3: -968884558
+      183_0: 1379492654
+      183_1: -258112128
+      183_2: 1444800243
+      183_3: 856157554
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
