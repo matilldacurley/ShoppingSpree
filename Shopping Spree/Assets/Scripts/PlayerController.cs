@@ -10,12 +10,14 @@ public class PlayerController : MonoBehaviour
     float vertical;
 
     public float runSpeed = 20.0f;
-
+    private Animator anim;
+    
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-      
+        anim = GetComponent<Animator>();
+        
     }
 
     void Update()
@@ -24,8 +26,18 @@ public class PlayerController : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
     }
 
+   
+
     private void FixedUpdate()
     {
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        if (body.velocity != Vector2.zero)
+        {
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+            anim.SetBool("isMoving", false);
+        }
     }
 }
