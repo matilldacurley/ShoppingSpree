@@ -12,7 +12,7 @@ public class ItemController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        bulletTarget = (PlayerControllerExperiment.PCE.bulletTarget - PlayerControllerExperiment.PCE.transform.position).normalized;
+        bulletTarget = (PlayerControllerExperiment.PCE.bulletTarget - PlayerControllerExperiment.PCE.spawnPoint.transform.position).normalized;
     }
 
     // Update is called once per frame
@@ -20,7 +20,8 @@ public class ItemController : MonoBehaviour
     {
         if(PlayerControllerExperiment.PCE.isThrown)
         {
-            rb.velocity = bulletTarget * bulletSpeed;
+            //rb.velocity = bulletTarget * bulletSpeed;
+            rb.velocity = new Vector2(bulletTarget.x * bulletSpeed, bulletTarget.y * bulletSpeed);
         }
     }
 }
