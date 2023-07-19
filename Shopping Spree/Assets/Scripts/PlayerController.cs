@@ -10,9 +10,7 @@ public class PlayerController : MonoBehaviour
     float vertical;
 
     public float runSpeed = 20.0f;
-    
 
-    Vector2 movementInput;
 
     void Start()
     {
@@ -29,6 +27,5 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
-
     }
 }
