@@ -17,11 +17,14 @@ public class PlayerControllerExperiment : MonoBehaviour
     public bool isThrown = false;
     public bool isCarting = false;
 
+    public Animator anim;
+
     void Start()
     {
         PCE = this;
         rb = GetComponent<Rigidbody2D>();
         runSpeed = baseRunSpeed;
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -68,6 +71,16 @@ public class PlayerControllerExperiment : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+
+        if (rb.velocity != Vector2.zero)
+        {
+            anim.SetBool("isMoving", true);
+        }
+
+        else if (rb.velocity == Vector2.zero)
+        {
+            anim.SetBool("isMoving", false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
