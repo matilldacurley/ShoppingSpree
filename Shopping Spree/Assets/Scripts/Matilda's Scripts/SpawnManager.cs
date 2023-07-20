@@ -18,7 +18,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         spawnManager = this;
-        SpawnEnemyWave(waveNumber);   
+        //SpawnEnemyWave(waveNumber);   
     }
 
     void SpawnEnemyWave(int num)
@@ -38,7 +38,7 @@ public class SpawnManager : MonoBehaviour
     {
         enemyCount = FindObjectsOfType<Enemy>().Length;
         //print(enemyCount);
-        if (enemyCount == 0)
+        if (enemyCount == 0 && GameManager.gameManager.isGameActive)
         {         
             waveNumber++;
             SpawnEnemyWave(waveNumber);
@@ -48,7 +48,7 @@ public class SpawnManager : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        GameObject ene = Instantiate(enemyPrefab, new Vector2(2.5f, Random.Range(-1,1)), enemyPrefab.transform.rotation);
+        GameObject ene = Instantiate(enemyPrefab, new Vector2(2.5f, (float)Random.Range(-1f,1f)), enemyPrefab.transform.rotation);
         GameObject item = ene.transform.GetChild(1).GetComponent<ThoughtBubble>().pickedItem();
         ene.GetComponent<CustomerControl>().wantItem = item;
         ene.transform.GetChild(0).GetComponent<Bar>().max_time += timePerWave * (SpawnManager.spawnManager.waveNumber - 1);
