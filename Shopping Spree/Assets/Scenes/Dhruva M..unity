@@ -6793,7 +6793,7 @@ MonoBehaviour:
   target: {fileID: 1152870249}
   player: {fileID: 610916108}
   pivotOffset: -0.135
-  distNeeded: 0.75
+  distNeeded: 20
   offset: 0.5
 --- !u!1 &1968709034
 GameObject:
@@ -7057,6 +7057,26 @@ PrefabInstance:
       propertyPath: baseRunSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7192300075490578738, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+      propertyPath: Items.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7192300075490578738, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+      propertyPath: Items.Array.data[0]
+      value: 
+      objectReference: {fileID: 3416750454758672857, guid: d7b416e4fefece249a72295e4404666e, type: 3}
+    - target: {fileID: 7192300075490578738, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+      propertyPath: Items.Array.data[1]
+      value: 
+      objectReference: {fileID: 2688352774182751250, guid: 0774d2313246342d48432f2184550a2e, type: 3}
+    - target: {fileID: 7192300075490578738, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+      propertyPath: Items.Array.data[2]
+      value: 
+      objectReference: {fileID: 5474767280160273700, guid: 706370524e97f40b19108e5d1a88af91, type: 3}
+    - target: {fileID: 7192300075490578738, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+      propertyPath: Items.Array.data[3]
+      value: 
+      objectReference: {fileID: 810277456520665214, guid: 857dce909e5044d89b134ee641e4977c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
 --- !u!1001 &7900786802478971626
