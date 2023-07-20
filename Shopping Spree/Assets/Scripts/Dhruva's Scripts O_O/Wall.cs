@@ -20,7 +20,7 @@ public class Wall : MonoBehaviour
     {
         if(!(collision.gameObject.CompareTag("Enemy")) && !(collision.gameObject.CompareTag("Player")))
         {
-            Destroy(collision.gameObject);
+            collision.attachedRigidbody.velocity = Vector3.zero;
         }
     }
 }
