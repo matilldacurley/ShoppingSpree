@@ -6,7 +6,7 @@ public class PlayerControllerExperiment : MonoBehaviour
 {
     public static PlayerControllerExperiment PCE;
     private Rigidbody2D rb;
-    private GameObject Item;
+    private List<GameObject> ItemsCollected = new List<GameObject>();
     public GameObject spawnPoint;
     private float horizontal;
     private float vertical;
@@ -45,15 +45,15 @@ public class PlayerControllerExperiment : MonoBehaviour
         }
         if(Input.GetMouseButtonDown(0))
         {
-            if(Item != null)
+            if(ItemsCollected.Count != 0)
             {
                 bulletTarget = new Vector3(spawnpos.x, spawnpos.y, 0);
                 isThrown = true;
-                Item.SetActive(true);
-                GameObject o = Instantiate(Item, spawnPoint.transform.position, Item.transform.rotation);
+                ItemsCollected[0].SetActive(true);
+                GameObject o = Instantiate(ItemsCollected[0], spawnPoint.transform.position, ItemsCollected[0].transform.rotation);
                 o.GetComponent<SpriteRenderer>().enabled = true;
                 o.GetComponent<ItemController>().bulletTarget = new Vector3(spawnpos.x, spawnpos.y, 0);
-                Item = null;
+                ItemsCollected.RemoveAt(0);
             }
             else
             {
@@ -87,11 +87,8 @@ public class PlayerControllerExperiment : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(Item == null)
-        {
-            Item = Items[other.GetComponent<ItemController>().id];
-            Destroy(other.gameObject);
-        }
+        ItemsCollected.Add(Items[other.GetComponent<ItemController>().id]);
+        Destroy(other.gameObject);
     }
 
 }
