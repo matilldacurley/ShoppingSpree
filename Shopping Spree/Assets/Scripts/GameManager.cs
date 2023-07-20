@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,11 +13,15 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public AudioClip[] music;
     public AudioSource audioSource;
+    public TextMeshProUGUI pointsText;
+    public int points = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = this;
+        points = 0;
+        pointsText.text = "x " + points;
         isGameActive = false;
         gameOverScreen.SetActive(false);
         titleScreen.SetActive(true);
@@ -24,6 +29,11 @@ public class GameManager : MonoBehaviour
         audioSource.Play();
     }
 
+    public void AddPoints(int numPoints)
+    {
+        points += numPoints;
+        pointsText.text = "x " + points;
+    }
 
     // Update is called once per frame
     void Update()
