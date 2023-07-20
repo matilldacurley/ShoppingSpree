@@ -22,6 +22,7 @@ public class CustomerControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
+        print("collected");
         if (col.gameObject.tag == wantItem.tag)
         {
             Destroy(col.gameObject);
