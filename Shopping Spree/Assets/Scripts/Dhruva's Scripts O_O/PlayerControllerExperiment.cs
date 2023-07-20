@@ -14,7 +14,6 @@ public class PlayerControllerExperiment : MonoBehaviour
     private float runSpeed;
     public float cartSpeed = 2.5f;
     public Vector3 bulletTarget;
-    public bool isThrown = false;
     public bool isCarting = false;
     public GameObject[] Items;
 
@@ -48,11 +47,11 @@ public class PlayerControllerExperiment : MonoBehaviour
             if(ItemsCollected.Count != 0)
             {
                 bulletTarget = new Vector3(spawnpos.x, spawnpos.y, 0);
-                isThrown = true;
                 ItemsCollected[0].SetActive(true);
                 GameObject o = Instantiate(ItemsCollected[0], spawnPoint.transform.position, ItemsCollected[0].transform.rotation);
                 o.GetComponent<SpriteRenderer>().enabled = true;
                 o.GetComponent<ItemController>().bulletTarget = new Vector3(spawnpos.x, spawnpos.y, 0);
+                o.GetComponent<ItemController>().StartMove();
                 ItemsCollected.RemoveAt(0);
             }
             else
