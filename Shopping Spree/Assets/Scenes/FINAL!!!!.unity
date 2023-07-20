@@ -153,9 +153,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -259,6 +259,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7023920efd04e914ba25c976f974a246, type: 3}
   - {fileID: 8300000, guid: 67f52009e593e124c81da90ac219b3f0, type: 3}
   audioSource: {fileID: 7968500}
+  pointsText: {fileID: 0}
+  points: 0
 --- !u!4 &7968502
 Transform:
   m_ObjectHideFlags: 0
@@ -8618,6 +8620,7 @@ MonoBehaviour:
   spawnRange: 1
   enemyCount: 0
   waveNumber: 1
+  timePerWave: 10
   spawnPos: {fileID: 1560232572}
 --- !u!4 &1593990455
 Transform:
