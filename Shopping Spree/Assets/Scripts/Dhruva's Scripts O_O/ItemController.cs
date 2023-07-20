@@ -38,10 +38,6 @@ public class ItemController : MonoBehaviour
         {
             Vector2 pos = new Vector2(Random.Range(-1.84f, 2.6f), Random.Range(-1.2f, 1.2f));
             transform.position = pos;
-            if (!other.CompareTag("SpawnReject"))
-            {
-                spawn = true;
-            }
         }
     }
 }
