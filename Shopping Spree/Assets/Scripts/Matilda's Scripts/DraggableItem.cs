@@ -57,7 +57,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         if (PlayerControllerExperiment.PCE.ItemsCollected[pos] != null)
         { 
-            GetComponent<Image>().sprite = PlayerControllerExperiment.PCE.ItemsCollected[0].GetComponent<SpriteRenderer>().sprite;
+            GetComponent<Image>().sprite = PlayerControllerExperiment.PCE.ItemsCollected[pos].GetComponent<SpriteRenderer>().sprite;
         }
     }
 }
