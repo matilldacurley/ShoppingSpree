@@ -468,6 +468,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2041873306}
     m_Modifications:
     - target: {fileID: 3664768703856440960, guid: 19668d869ffa94df196c6884b48cd52c, type: 3}
+      propertyPath: pos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664768703856440960, guid: 19668d869ffa94df196c6884b48cd52c, type: 3}
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: d87f90a8a175c4d54ac25d0e6c7261ea, type: 2}
@@ -2700,6 +2704,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 222933216}
     m_Modifications:
     - target: {fileID: 3664768703856440960, guid: 19668d869ffa94df196c6884b48cd52c, type: 3}
+      propertyPath: pos
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664768703856440960, guid: 19668d869ffa94df196c6884b48cd52c, type: 3}
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: bb6d3f83266c04b4fb762d19e86a71b5, type: 2}
@@ -4301,6 +4309,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2121373218}
     m_Modifications:
+    - target: {fileID: 3664768703856440960, guid: 19668d869ffa94df196c6884b48cd52c, type: 3}
+      propertyPath: pos
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3664768703856440960, guid: 19668d869ffa94df196c6884b48cd52c, type: 3}
       propertyPath: item
       value: 
@@ -8029,6 +8041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46fe7fd4a469d46c8aa57a85463fb5b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGameActive: 0
   lives: 3
   titleScreen: {fileID: 1753491558}
   gameOverScreen: {fileID: 252386494}

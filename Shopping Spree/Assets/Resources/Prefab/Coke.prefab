@@ -149,4 +149,4 @@ MonoBehaviour:
   bulletTarget: {x: 0, y: 0, z: 0}
   bulletSpeed: 2.5
   id: 0
-  spawn: 0
+  isThrown: 0
