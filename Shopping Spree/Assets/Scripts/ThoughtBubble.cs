@@ -11,9 +11,9 @@ public class ThoughtBubble : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rand = Random.Range(0, items.Length);
-        pitem = Instantiate(items[rand], new Vector3(transform.position.x, transform.position.y, -0.1f), items[rand].transform.rotation);
-        pitem.transform.SetParent(transform.parent);
+        //rand = Random.Range(0, items.Length);
+        //pitem = Instantiate(items[rand], new Vector3(transform.position.x, transform.position.y, -0.1f), items[rand].transform.rotation);
+        //pitem.transform.SetParent(transform.parent);
         //name = 
     }
 
@@ -26,6 +26,9 @@ public class ThoughtBubble : MonoBehaviour
 
     public GameObject pickedItem()
     {
+        rand = Random.Range(0, items.Length);
+        pitem = Instantiate(items[rand], new Vector3(transform.position.x, transform.position.y, -0.1f), items[rand].transform.rotation);
+        pitem.transform.SetParent(transform.parent);
         return items[rand];
     }
 
