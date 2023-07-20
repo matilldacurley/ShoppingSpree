@@ -16,6 +16,7 @@ public class PlayerControllerExperiment : MonoBehaviour
     public Vector3 bulletTarget;
     public bool isCarting = false;
     public GameObject[] Items;
+    public bool invFull = false;
 
     public Animator anim;
 
@@ -67,6 +68,15 @@ public class PlayerControllerExperiment : MonoBehaviour
         {
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
+
+        if (ItemsCollected.Count == 4)
+        {
+            invFull = true;
+        }
+        else 
+        {
+            invFull = false;
+        }
     }
 
     private void FixedUpdate()
@@ -86,8 +96,11 @@ public class PlayerControllerExperiment : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        ItemsCollected.Add(Items[other.GetComponent<ItemController>().id]);
-        Destroy(other.gameObject);
+        if (!invFull)
+        { 
+            ItemsCollected.Add(Items[other.GetComponent<ItemController>().id]);
+            Destroy(other.gameObject);
+        }
     }
 
 }
