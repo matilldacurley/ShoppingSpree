@@ -10,12 +10,14 @@ public class PlayerController : MonoBehaviour
     float vertical;
 
     public float runSpeed = 20.0f;
+    public float runspeed = 32.0f;
 
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-      
+        body = System.Collections;
+
     }
 
     void Update()
@@ -29,3 +31,6 @@ public class PlayerController : MonoBehaviour
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
 }
+
+
+
