@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager gameManager;
     private bool isGameActive = false;
     public int lives = 3;
     public GameObject titleScreen;
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = this;
         isGameActive = false;
         gameOverScreen.SetActive(false);
         titleScreen.SetActive(true);
