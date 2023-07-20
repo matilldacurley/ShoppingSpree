@@ -49,6 +49,9 @@ public class CustomerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(transform.GetChild(0).GetComponent<Bar>().time_remaining <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
