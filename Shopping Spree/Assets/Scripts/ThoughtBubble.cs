@@ -29,7 +29,7 @@ public class ThoughtBubble : MonoBehaviour
         rand = Random.Range(0, items.Length);
         pitem = Instantiate(items[rand], new Vector3(transform.position.x, transform.position.y, -0.1f), items[rand].transform.rotation);
         pitem.transform.SetParent(transform.parent);
-        pitem.GetCompoent<BoxCollider2D>().enabled = false;
+        pitem.GetComponent<BoxCollider2D>().enabled = false;
         return items[rand];
     }
 

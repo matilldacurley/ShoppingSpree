@@ -9137,7 +9137,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46fe7fd4a469d46c8aa57a85463fb5b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lives: 3
   titleScreen: {fileID: 563971530}
+  gameOverScreen: {fileID: 0}
+  music: []
+  audioSource: {fileID: 0}
 --- !u!4 &1950273529
 Transform:
   m_ObjectHideFlags: 0
