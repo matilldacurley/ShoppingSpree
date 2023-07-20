@@ -5,34 +5,47 @@ using UnityEngine;
 public class CustomerControl : MonoBehaviour
 {
     public GameObject wantItem;
-    public int collect;
     public GameObject bar;
     public GameObject thoughtBubble;
-    public GameObject[] items;
-    public int rand;
-    public string name1;
+    public bool collected = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        wantItem = transform.GetChild(0).GetComponent<ThoughtBubble>().pickedItem();
+        //wantItem = transform.GetChild(1).GetComponent<ThoughtBubble>().pickedItem();
         bar.SetActive(true);
         thoughtBubble.SetActive(true);
-        print(wantItem.tag);
+        print("want: " + wantItem.GetComponent<ItemController>().id);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        print("collected");
-        if (other.gameObject.tag == wantItem.tag)
+        print("jhhabrfb:" + other.gameObject.GetComponent<ItemController>().id);
+        if(other.gameObject.GetComponent<ItemController>().id == wantItem.GetComponent<ItemController>().id)
         {
             Destroy(other.gameObject);
+            GetComponent<Enemy>().rb.velocity = Vector2.zero;
+            GetComponent<Enemy>().enabled = false;
         }
+
     }
+
+
+    // public void OnTriggerEnter(Collider other)
+    //{
+    //print("collected");
+    /*
+    if (other.gameObject.tag == wantItem.tag)
+    {
+        Destroy(other.gameObject);
+    }
+    */
+    //}
+
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
