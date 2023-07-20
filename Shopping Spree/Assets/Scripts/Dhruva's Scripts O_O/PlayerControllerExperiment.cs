@@ -86,8 +86,11 @@ public class PlayerControllerExperiment : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Item = Items[other.GetComponent<ItemController>().id];
-        Destroy(other.gameObject);
+        if(Item == null)
+        {
+            Item = Items[other.GetComponent<ItemController>().id];
+            Destroy(other.gameObject);
+        }
     }
 
 }
