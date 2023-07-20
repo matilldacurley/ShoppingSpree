@@ -10,10 +10,12 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [Header("UI")]
     public Image image;
     public Text countText;
+    public int pos;
 
     [HideInInspector] public Item item;
     [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentAfterDrag;
+
 
     public void InitializeItem(Item newItem)
     {
@@ -51,5 +53,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         image.raycastTarget = true;
     }
 
-
+    void Update()
+    {
+        if (PlayerControllerExperiment.PCE.ItemsCollected[pos] != null)
+        { 
+            GetComponent<Image>().sprite = PlayerControllerExperiment.PCE.ItemsCollected[0].GetComponent<SpriteRenderer>().sprite;
+        }
+    }
 }

@@ -6,7 +6,7 @@ public class PlayerControllerExperiment : MonoBehaviour
 {
     public static PlayerControllerExperiment PCE;
     private Rigidbody2D rb;
-    private List<GameObject> ItemsCollected = new List<GameObject>();
+    public List<GameObject> ItemsCollected = new List<GameObject>();
     public GameObject spawnPoint;
     private float horizontal;
     private float vertical;
