@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
         gameOverScreen.SetActive(false);
         titleScreen.SetActive(true);
+        //audioSource.
+        Debug.Log(music[0].name);
         audioSource.clip = music[0];
         audioSource.Play();
     }
