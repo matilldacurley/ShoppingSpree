@@ -127,6 +127,7 @@ MonoBehaviour:
   wantItem: {fileID: 0}
   bar: {fileID: 8439747842043647964}
   thoughtBubble: {fileID: 4357058181093396153}
+  collected: 0
 --- !u!114 &-5102769324768527677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4886427708529101134, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
-  speed: 0.1
+  rb: {fileID: 0}
+  speed: 0.35
 --- !u!50 &8876314880140621405
 Rigidbody2D:
   serializedVersion: 4

@@ -8,6 +8,7 @@ public class CustomerControl : MonoBehaviour
     public GameObject bar;
     public GameObject thoughtBubble;
     public bool collected = false;
+    public int value = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +21,14 @@ public class CustomerControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         print("jhhabrfb:" + other.gameObject.GetComponent<ItemController>().id);
         if(other.gameObject.GetComponent<ItemController>().id == wantItem.GetComponent<ItemController>().id)
         {
             Destroy(gameObject);
             Destroy(other.gameObject);
-            
+            GameManager.gameManager.AddPoints(value);
+
         }
 
     }
@@ -46,6 +49,9 @@ public class CustomerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(transform.GetChild(0).GetComponent<Bar>().time_remaining <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

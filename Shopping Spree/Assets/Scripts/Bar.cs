@@ -22,6 +22,8 @@ public class Bar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //max_time += timePerWave * (SpawnManager.spawnManager.waveNumber - 1);
+
         float size;
         if (time_remaining > 0)
         { 
@@ -31,14 +33,19 @@ public class Bar : MonoBehaviour
             fill.transform.localScale = new Vector2(startSize.x, size);
         }
 
-        if (time_remaining < maxValue * 0.66)
+        if (time_remaining < max_time * 0.66)
         {
             fill.GetComponent<SpriteRenderer>().color = Color.yellow;
         }
 
-        if (time_remaining < maxValue * 0.33)
+        if (time_remaining < max_time * 0.33)
         {
             fill.GetComponent<SpriteRenderer>().color = Color.red;
+        }
+
+        if(time_remaining <= 0)
+        {
+            GameManager.gameManager.lives--;
         }
     }
 }
