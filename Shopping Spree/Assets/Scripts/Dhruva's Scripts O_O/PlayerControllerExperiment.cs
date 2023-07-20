@@ -16,6 +16,7 @@ public class PlayerControllerExperiment : MonoBehaviour
     public Vector3 bulletTarget;
     public bool isThrown = false;
     public bool isCarting = false;
+    public GameObject[] Items;
 
     public Animator anim;
 
@@ -85,9 +86,8 @@ public class PlayerControllerExperiment : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Item = other.gameObject;
-        //Item.SetActive(false);
-        other.GetComponent<SpriteRenderer>().enabled = false;
+        Item = Items[other.GetComponent<ItemController>().id];
+        Destroy(other.gameObject);
     }
 
 }

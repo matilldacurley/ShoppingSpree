@@ -7,6 +7,7 @@ public class ItemController : MonoBehaviour
     private Rigidbody2D rb;
     public Vector3 bulletTarget;
     public float bulletSpeed = 1.25f;
+    public int id = 0;
 
     // Start is called before the first frame update
     void Start()

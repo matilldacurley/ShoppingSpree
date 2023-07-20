@@ -18,7 +18,7 @@ public class Wall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Item"))
+        if(!(collision.gameObject.CompareTag("Enemy")) && !(collision.gameObject.CompareTag("Player")))
         {
             Destroy(collision.gameObject);
         }

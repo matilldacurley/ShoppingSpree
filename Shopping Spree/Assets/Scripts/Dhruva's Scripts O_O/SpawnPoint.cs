@@ -32,7 +32,8 @@ public class SpawnPoint : MonoBehaviour
 			mousepos.x = mousepos.x - objectpos.x;
 			mousepos.y = mousepos.y - objectpos.y;
 			angle = Mathf.Atan2(mousepos.y, mousepos.x) * Mathf.Rad2Deg;
-			transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+			transform.rotation = Quaternion.Euler(0, 0, 360 - Mathf.Abs(transform.rotation.z));
+			//transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 		}
 	}
 }
