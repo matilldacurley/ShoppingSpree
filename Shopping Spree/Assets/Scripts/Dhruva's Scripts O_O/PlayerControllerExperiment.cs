@@ -53,6 +53,7 @@ public class PlayerControllerExperiment : MonoBehaviour
                 GameObject o = Instantiate(Item, spawnPoint.transform.position, Item.transform.rotation);
                 o.GetComponent<SpriteRenderer>().enabled = true;
                 o.GetComponent<ItemController>().bulletTarget = new Vector3(spawnpos.x, spawnpos.y, 0);
+                Item = null;
             }
             else
             {
