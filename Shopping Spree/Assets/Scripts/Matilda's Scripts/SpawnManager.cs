@@ -44,7 +44,11 @@ public class SpawnManager : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, spawnPos.position, enemyPrefab.transform.rotation);
+        GameObject ene = Instantiate(enemyPrefab, new Vector2(0, 0), enemyPrefab.transform.rotation);
+        GameObject item = ene.transform.GetChild(1).GetComponent<ThoughtBubble>().pickedItem();
+        ene.GetComponent<CustomerControl>().wantItem = item;
+        Vector2 pos = new Vector2(Random.Range(0, 3), Random.Range(2, 3));
+        Instantiate(item, pos, enemyPrefab.transform.rotation);
     }
     private Vector2 GenerateSpawnPosition()
     {
