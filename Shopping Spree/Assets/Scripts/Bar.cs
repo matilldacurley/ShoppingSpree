@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Bar : MonoBehaviour
 {
     public GameObject fill;
-    public float max_time = 5.0f;
+    public float max_time = 15.0f;
     public float time_remaining;
     public Vector2 startSize;
     public int maxValue;
@@ -22,23 +22,30 @@ public class Bar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //max_time += timePerWave * (SpawnManager.spawnManager.waveNumber - 1);
+
         float size;
         if (time_remaining > 0)
         { 
             time_remaining -= Time.deltaTime;
-            size = (startSize.y / (float)maxValue) * (float)time_remaining;
+            size = (startSize.y / (float)max_time) * (float)time_remaining;
 
             fill.transform.localScale = new Vector2(startSize.x, size);
         }
 
-        if (time_remaining < maxValue * 0.66)
+        if (time_remaining < max_time * 0.66)
         {
             fill.GetComponent<SpriteRenderer>().color = Color.yellow;
         }
 
-        if (time_remaining < maxValue * 0.33)
+        if (time_remaining < max_time * 0.33)
         {
             fill.GetComponent<SpriteRenderer>().color = Color.red;
+        }
+
+        if(time_remaining <= 0)
+        {
+            GameManager.gameManager.lives--;
         }
     }
 }

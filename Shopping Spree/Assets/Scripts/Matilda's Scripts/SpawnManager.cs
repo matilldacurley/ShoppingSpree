@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    public static SpawnManager spawnManager;
     public GameObject enemyPrefab;
     public float spawnRange = 9;
     public int enemyCount;
     public int waveNumber = 1;
+    public float timePerWave = 10f;
     public Transform spawnPos;
     
 
@@ -15,7 +17,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        spawnManager = this;
         SpawnEnemyWave(waveNumber);   
     }
 
@@ -49,6 +51,7 @@ public class SpawnManager : MonoBehaviour
         GameObject ene = Instantiate(enemyPrefab, new Vector2(2.5f, Random.Range(-1,1)), enemyPrefab.transform.rotation);
         GameObject item = ene.transform.GetChild(1).GetComponent<ThoughtBubble>().pickedItem();
         ene.GetComponent<CustomerControl>().wantItem = item;
+        ene.transform.GetChild(0).GetComponent<Bar>().max_time += timePerWave * (SpawnManager.spawnManager.waveNumber - 1);
         Vector2 pos = new Vector2(Random.Range(-1.84f, 2.6f), Random.Range(-1.2f, 1.2f));
         Instantiate(item, pos, enemyPrefab.transform.rotation);
     }
