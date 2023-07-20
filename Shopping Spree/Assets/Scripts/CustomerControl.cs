@@ -18,14 +18,15 @@ public class CustomerControl : MonoBehaviour
         wantItem = transform.GetChild(0).GetComponent<ThoughtBubble>().pickedItem();
         bar.SetActive(true);
         thoughtBubble.SetActive(true);
+        print(wantItem.tag);
     }
 
-    private void OnCollisionEnter(Collision col)
+    private void OnTriggerEnter(Collider other)
     {
         print("collected");
-        if (col.gameObject.tag == wantItem.tag)
+        if (other.gameObject.tag == wantItem.tag)
         {
-            Destroy(col.gameObject);
+            Destroy(other.gameObject);
         }
     }
 
