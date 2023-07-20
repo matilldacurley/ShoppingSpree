@@ -3,24 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    // Start is called before the first frame update
     public void OnBeginDrag(PointerEventData eventData)
     {
-        image.raycastTarget = false;
-        parentAfterDrag = transform.parent;
-        transform.SetParent(transform.root);
+        Debug.Log("Begin drag");
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        Debug.Log("Dragging");
         transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        image.raycatTarget = true;
-        transform.SetParent(parentAfterDrag);
+        Debug.Log("End drag");
     }
+
+
 }
