@@ -5146,6 +5146,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5030291407274856683, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
   m_PrefabInstance: {fileID: 114076374245602112}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &610916109 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3076027724399803688, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+  m_PrefabInstance: {fileID: 114076374245602112}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &951441938
 GameObject:
   m_ObjectHideFlags: 0
@@ -7595,6 +7600,10 @@ PrefabInstance:
       propertyPath: m_UseFullKinematicContacts
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7192300075490578738, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 610916109}
     - target: {fileID: 7192300075490578738, guid: ab13a929738a442f58a5037d43c6d266, type: 3}
       propertyPath: spawnPoint
       value: 
