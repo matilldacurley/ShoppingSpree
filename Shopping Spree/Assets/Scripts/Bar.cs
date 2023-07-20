@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Bar : MonoBehaviour
 {
     public GameObject fill;
-    public float max_time = 5.0f;
+    public float max_time = 15.0f;
     public float time_remaining;
     public Vector2 startSize;
     public int maxValue;
@@ -26,7 +26,7 @@ public class Bar : MonoBehaviour
         if (time_remaining > 0)
         { 
             time_remaining -= Time.deltaTime;
-            size = (startSize.y / (float)maxValue) * (float)time_remaining;
+            size = (startSize.y / (float)max_time) * (float)time_remaining;
 
             fill.transform.localScale = new Vector2(startSize.x, size);
         }
