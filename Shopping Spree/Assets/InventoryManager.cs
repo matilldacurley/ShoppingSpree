@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public InventorySquare[] inventorySquares;
+    public GameObject inventoryItemPrefab;
 
     public void AddItem(Item item)
     {
@@ -23,6 +24,8 @@ public class InventoryManager : MonoBehaviour
 
     void SpawnNewItem(Item item, InventorySquare square)
     {
-
+        GameObject newItemGo = Instantiate(inventoryItemPrefab, square.transform);
+        DraggableItem draggableItem = newItemGo.GetComponent<DraggableItem>();
+        draggableItem.InitializeItem(item);
     }
 }
