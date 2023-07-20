@@ -23,9 +23,9 @@ public class CustomerControl : MonoBehaviour
         print("jhhabrfb:" + other.gameObject.GetComponent<ItemController>().id);
         if(other.gameObject.GetComponent<ItemController>().id == wantItem.GetComponent<ItemController>().id)
         {
+            Destroy(gameObject);
             Destroy(other.gameObject);
-            GetComponent<Enemy>().rb.velocity = Vector2.zero;
-            GetComponent<Enemy>().enabled = false;
+            
         }
 
     }
