@@ -53,6 +53,7 @@ public class PlayerControllerExperiment : MonoBehaviour
                 GameObject o = Instantiate(Item, spawnPoint.transform.position, Item.transform.rotation);
                 o.GetComponent<SpriteRenderer>().enabled = true;
                 o.GetComponent<ItemController>().bulletTarget = new Vector3(spawnpos.x, spawnpos.y, 0);
+                Item = null;
             }
             else
             {
@@ -86,8 +87,11 @@ public class PlayerControllerExperiment : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Item = Items[other.GetComponent<ItemController>().id];
-        Destroy(other.gameObject);
+        if(Item == null)
+        {
+            Item = Items[other.GetComponent<ItemController>().id];
+            Destroy(other.gameObject);
+        }
     }
 
 }
