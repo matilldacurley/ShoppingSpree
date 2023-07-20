@@ -11,7 +11,7 @@ public class ThoughtBubble : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rand = Random.Range(0, 2);
+        rand = Random.Range(0, items.Length);
         print(rand);
         pitem = Instantiate(items[rand], new Vector3(transform.position.x, transform.position.y, -0.1f), items[rand].transform.rotation);
         pitem.SetActive(false);
