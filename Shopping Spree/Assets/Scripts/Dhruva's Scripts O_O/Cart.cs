@@ -16,6 +16,7 @@ public class Cart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float horizontal = Input.GetAxisRaw("Horizontal");
         if(PlayerControllerExperiment.PCE.isCarting)
         {
             GetComponent<SpriteRenderer>().enabled = true;
@@ -23,6 +24,14 @@ public class Cart : MonoBehaviour
         else
         {
             GetComponent<SpriteRenderer>().enabled = false;
+        }
+        if (horizontal == -1)
+        {
+            transform.localScale = new Vector3(-1 * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        if (horizontal == 1)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
         transform.position = new Vector3(player.transform.position.x, player.transform.position.y + cartOffset, 0);
     }
