@@ -15,14 +15,15 @@ public class GameManager : MonoBehaviour
     public AudioClip[] music;
     public AudioSource audioSource;
     public TextMeshProUGUI pointsText;
+    public TextMeshProUGUI livesText;
     public int points = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = this;
-        points = 0;
         pointsText.text = "x " + points;
+        livesText.text = "x " + lives;
         isGameActive = false;
         gameOverScreen.SetActive(false);
         endScreen.SetActive(false);
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
         pointsText.text = "x " + points;
     }
 
+
     // Update is called once per frame
     void Update()
     {
@@ -50,10 +52,6 @@ public class GameManager : MonoBehaviour
             endScreen.SetActive(false);
             audioSource.clip = music[1];
             audioSource.Play();
-        }
-        if(Input.GetKeyDown(KeyCode.Backspace))
-        {
-            lives--;
         }
         if(lives <= 0 && isGameActive)
         {
@@ -72,6 +70,12 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(WaitAndLoad());
         }
+    }
+
+    public void LoseLives()
+    {
+        lives--;
+        livesText.text = "x " + lives;
     }
 
     IEnumerator WaitAndLoad()

@@ -45,7 +45,7 @@ public class Bar : MonoBehaviour
 
         if(time_remaining <= 0)
         {
-            GameManager.gameManager.lives--;
+            GameManager.gameManager.LoseLives();
         }
     }
 }

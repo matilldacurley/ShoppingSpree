@@ -2844,7 +2844,7 @@ GameObject:
   - component: {fileID: 563971532}
   - component: {fileID: 563971531}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5612,7 +5612,7 @@ GameObject:
   - component: {fileID: 1336406698}
   - component: {fileID: 1336406697}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Lives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9173,7 +9173,7 @@ GameObject:
   - component: {fileID: 1634035848}
   - component: {fileID: 1634035847}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Rule Book
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9632,7 +9632,7 @@ GameObject:
   - component: {fileID: 1675811495}
   - component: {fileID: 1675811494}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12306,6 +12306,7 @@ MonoBehaviour:
   music: []
   audioSource: {fileID: 1950273530}
   pointsText: {fileID: 747829337}
+  livesText: {fileID: 323948504}
   points: 0
 --- !u!4 &1950273529
 Transform:
