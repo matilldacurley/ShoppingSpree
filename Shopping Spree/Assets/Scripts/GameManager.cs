@@ -65,12 +65,12 @@ public class GameManager : MonoBehaviour
             audioSource.clip = music[2];
             audioSource.Play();
         }
-        if (points == 10)
+        if (points == 20)
         {
             isGameActive = false;
             endScreen.SetActive(true);
         }
-        if (points == 5)
+        if (points == 10)
         {
             StartCoroutine(WaitAndLoad());
         }
@@ -79,6 +79,9 @@ public class GameManager : MonoBehaviour
     IEnumerator WaitAndLoad()
     {
         yield return new WaitForSeconds(1);
+        audioSource.Stop();
         SceneManager.LoadScene("Level2");
+        audioSource.clip = music[4];
+        audioSource.Play();
     }
 }
