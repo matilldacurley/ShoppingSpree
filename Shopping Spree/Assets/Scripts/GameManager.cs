@@ -98,8 +98,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Level2");
             audioSource.Stop();
             inLevel2 = true;
-            audioSource.clip = music[3];
-            audioSource.Play();
         }
     }
 
