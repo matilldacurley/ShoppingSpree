@@ -27,8 +27,6 @@ public class GameManager : MonoBehaviour
         gameOverScreen.SetActive(false);
         endScreen.SetActive(false);
         titleScreen.SetActive(true);
-        //audioSource.
-        Debug.Log(music[0].name);
         audioSource.clip = music[0];
         audioSource.Play();
     }
@@ -81,7 +79,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         audioSource.Stop();
         SceneManager.LoadScene("Level2");
-        audioSource.clip = music[4];
+        audioSource.clip = music[3];
         audioSource.Play();
     }
 }
