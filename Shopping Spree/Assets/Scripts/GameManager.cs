@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int lives = 3;
     public GameObject titleScreen;
     public GameObject gameOverScreen;
+    public GameObject endScreen;
     public AudioClip[] music;
     public AudioSource audioSource;
     public TextMeshProUGUI pointsText;
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
         pointsText.text = "x " + points;
         isGameActive = false;
         gameOverScreen.SetActive(false);
+        endScreen.SetActive(false);
         titleScreen.SetActive(true);
         //audioSource.
         Debug.Log(music[0].name);
@@ -47,6 +49,7 @@ public class GameManager : MonoBehaviour
             isGameActive = true;
             titleScreen.SetActive(false);
             gameOverScreen.SetActive(false);
+            endScreen.SetActive(false);
             audioSource.clip = music[1];
             audioSource.Play();
         }
@@ -62,7 +65,12 @@ public class GameManager : MonoBehaviour
             audioSource.clip = music[2];
             audioSource.Play();
         }
-        if(points == 9)
+        if (points == 10)
+        {
+            isGameActive = false;
+            endScreen.SetActive(true);
+        }
+        if (points == 5)
         {
             StartCoroutine(WaitAndLoad());
         }
