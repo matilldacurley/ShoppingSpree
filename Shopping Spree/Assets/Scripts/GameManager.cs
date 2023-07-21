@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
             isGameActive = false;
             endScreen.SetActive(true);
         }
-        if (points == 10)
+        if (points == 11)
         {
             StartCoroutine(WaitAndLoad());
         }
