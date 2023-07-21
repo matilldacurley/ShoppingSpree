@@ -6000,7 +6000,7 @@ MonoBehaviour:
   spawnRange: 1
   enemyCount: 0
   waveNumber: 1
-  timePerWave: 8
+  timePerWave: 6
   spawnPos: {fileID: 744832252}
 --- !u!4 &1501164311
 Transform:
