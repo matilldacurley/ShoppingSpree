@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         gameManager = this;
         pointsText.text = "x " + points;
+        livesText.text = "x " + lives;
         isGameActive = false;
         gameOverScreen.SetActive(false);
         endScreen.SetActive(false);
