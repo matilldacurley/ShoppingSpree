@@ -42,7 +42,6 @@ public class SpawnManager : MonoBehaviour
         {         
             waveNumber++;
             SpawnEnemyWave(waveNumber);
-            
         }
     }
 

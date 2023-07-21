@@ -42,10 +42,11 @@ public class Bar : MonoBehaviour
         {
             fill.GetComponent<SpriteRenderer>().color = Color.red;
         }
-
+        /*
         if(time_remaining <= 0)
         {
             GameManager.gameManager.LoseLives();
         }
+        */
     }
 }

@@ -15,6 +15,8 @@ public class ThoughtBubble : MonoBehaviour
         //pitem = Instantiate(items[rand], new Vector3(transform.position.x, transform.position.y, -0.1f), items[rand].transform.rotation);
         //pitem.transform.SetParent(transform.parent);
         //name = 
+
+        //print(GetComponent<GameObject>().activeSelf);
     }
 
     public void disPlay()
@@ -36,6 +38,13 @@ public class ThoughtBubble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        if (!gameObject.activeSelf)
+        {
+            Destroy(pitem);
+        }
+        
         pitem.transform.position = new Vector3(transform.position.x, transform.position.y, -0.1f);
+
     }
 }
