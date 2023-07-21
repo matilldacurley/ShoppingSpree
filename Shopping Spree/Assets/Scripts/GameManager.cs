@@ -22,14 +22,19 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject[] controllers = GameObject.FindGameObjectsWithTag("GameController");
+        if(controllers.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+        DontDestroyOnLoad(this.gameObject);
         gameManager = this;
-        points = 0;
         pointsText.text = "x " + points;
         isGameActive = false;
         gameOverScreen.SetActive(false);
         endScreen.SetActive(false);
         titleScreen.SetActive(true);
-        if (inLevel2)
+        if(inLevel2)
         {
             audioSource.clip = music[3];
             audioSource.Play();
@@ -50,7 +55,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isGameActive)
+        if (Input.GetKeyDown(KeyCode.Space) && !isGameActive && !inLevel2)
         {
             lives = 3;
             audioSource.Stop();
@@ -60,6 +65,14 @@ public class GameManager : MonoBehaviour
             endScreen.SetActive(false);
             audioSource.clip = music[1];
             audioSource.Play();
+        }
+        else if(Input.GetKeyDown(KeyCode.Space) && !isGameActive && inLevel2)
+        {
+            lives = 3;
+            isGameActive = true;
+            titleScreen.SetActive(false);
+            gameOverScreen.SetActive(false);
+            endScreen.SetActive(false);
         }
         if(lives <= 0 && isGameActive)
         {

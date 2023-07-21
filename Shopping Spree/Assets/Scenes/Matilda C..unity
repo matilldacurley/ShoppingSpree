@@ -3839,7 +3839,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: press [r] to reset
+  m_Text: press [SPACE] to reset
 --- !u!222 &759081442
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12281,7 +12281,7 @@ GameObject:
   - component: {fileID: 1950273530}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12299,6 +12299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameActive: 0
+  inLevel2: 0
   lives: 3
   titleScreen: {fileID: 563971530}
   gameOverScreen: {fileID: 8768713}
@@ -12310,6 +12311,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7023920efd04e914ba25c976f974a246, type: 3}
   audioSource: {fileID: 1950273530}
   pointsText: {fileID: 747829337}
+  livesText: {fileID: 0}
   points: 0
 --- !u!4 &1950273529
 Transform:
