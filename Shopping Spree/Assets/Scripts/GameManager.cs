@@ -17,20 +17,13 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public TextMeshProUGUI pointsText;
     public TextMeshProUGUI livesText;
-    public int points = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject[] controllers = GameObject.FindGameObjectsWithTag("GameController");
-        if (controllers.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-        DontDestroyOnLoad(this.gameObject);
         gameManager = this;
-        pointsText.text = "x " + points;
+        pointsText.text = "x " + PointsManager.pointsManager.points;
         livesText.text = "x " + lives;
         isGameActive = false;
         gameOverScreen.SetActive(false);
@@ -51,8 +44,8 @@ public class GameManager : MonoBehaviour
 
     public void AddPoints(int numPoints)
     {
-        points += numPoints;
-        pointsText.text = "x " + points;
+        PointsManager.pointsManager.points += numPoints;
+        pointsText.text = "x " + PointsManager.pointsManager.points;
     }
 
 
@@ -87,17 +80,19 @@ public class GameManager : MonoBehaviour
             audioSource.clip = music[2];
             audioSource.Play();
         }
-        if (points == 20)
+        if (PointsManager.pointsManager.points == 20)
         {
             isGameActive = false;
             endScreen.SetActive(true);
         }
-        if (points == 9)
+        if (PointsManager.pointsManager.points == 9)
         {
-            AddPoints(1);
             SceneManager.LoadScene("Level2");
+            AddPoints(1);
             audioSource.Stop();
             inLevel2 = true;
+            isGameActive = false;
+            StartCoroutine(setObjects());
         }
     }
 
@@ -105,6 +100,17 @@ public class GameManager : MonoBehaviour
     {
         lives--;
         livesText.text = "x " + lives;
+    }
+
+    IEnumerator setObjects()
+    {
+        yield return new WaitForSeconds(2);
+        print("Yey");
+        endScreen = GameObject.Find("EndScreen");
+        titleScreen = GameObject.Find("TitleScreen");
+        gameOverScreen = GameObject.Find("Game Over Screen");
+        pointsText = GameObject.Find("Points").GetComponent<TextMeshProUGUI>();
+        livesText = GameObject.Find("Lives").GetComponent<TextMeshProUGUI>();
     }
 
 }
