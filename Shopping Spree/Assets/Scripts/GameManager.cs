@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
     public bool isGameActive = false;
+    public bool GameOver = false;
     public bool inLevel2 = false;
     public int lives = 3;
     public GameObject titleScreen;
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isGameActive && !inLevel2)
+        if (Input.GetKeyDown(KeyCode.Space) && !isGameActive && !inLevel2 && !GameOver)
         {
             lives = 3;
             audioSource.Stop();
@@ -63,13 +64,27 @@ public class GameManager : MonoBehaviour
             audioSource.clip = music[1];
             audioSource.Play();
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && !isGameActive && inLevel2)
+        else if (Input.GetKeyDown(KeyCode.Space) && !isGameActive && inLevel2 && !GameOver)
         {
             lives = 3;
             isGameActive = true;
             titleScreen.SetActive(false);
             gameOverScreen.SetActive(false);
             endScreen.SetActive(false);
+        }
+        else if(Input.GetKeyDown(KeyCode.Space) && !isGameActive && inLevel2 && GameOver)
+        {
+            SceneManager.LoadScene("Level1");
+            titleScreen.SetActive(true);
+            gameOverScreen.SetActive(false);
+            endScreen.SetActive(false);
+            inLevel2 = false;
+            isGameActive = false;
+            GameOver = false;
+            PointsManager.pointsManager.points = 0;
+            lives = 3;
+            pointsText.text = "x " + PointsManager.pointsManager.points;
+            livesText.text = "x " + lives;
         }
 
         if (lives <= 0 && isGameActive)
@@ -82,8 +97,12 @@ public class GameManager : MonoBehaviour
         }
         if (PointsManager.pointsManager.points == 20)
         {
+            audioSource.Stop();
             isGameActive = false;
+            GameOver = true;
             endScreen.SetActive(true);
+            audioSource.clip = music[1];
+            audioSource.Play();
         }
         if (PointsManager.pointsManager.points == 9)
         {
@@ -92,7 +111,6 @@ public class GameManager : MonoBehaviour
             audioSource.Stop();
             inLevel2 = true;
             isGameActive = false;
-            StartCoroutine(setObjects());
         }
     }
 
@@ -100,17 +118,6 @@ public class GameManager : MonoBehaviour
     {
         lives--;
         livesText.text = "x " + lives;
-    }
-
-    IEnumerator setObjects()
-    {
-        yield return new WaitForSeconds(2);
-        print("Yey");
-        endScreen = GameObject.Find("EndScreen");
-        titleScreen = GameObject.Find("TitleScreen");
-        gameOverScreen = GameObject.Find("Game Over Screen");
-        pointsText = GameObject.Find("Points").GetComponent<TextMeshProUGUI>();
-        livesText = GameObject.Find("Lives").GetComponent<TextMeshProUGUI>();
     }
 
 }
