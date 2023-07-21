@@ -12145,7 +12145,7 @@ MonoBehaviour:
   m_Text: '5. you start with three lives. if you let a customer''s timer run out,
     you lose one.
 
-    6. 5 stars = level 2
+    6. 10 stars = level 2
 
     7. the enemies will run after you.
     they can''t hurt you, but they can get in your way.'
