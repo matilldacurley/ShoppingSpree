@@ -8208,6 +8208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameActive: 0
+  inLevel2: 0
   lives: 3
   titleScreen: {fileID: 1825656924}
   gameOverScreen: {fileID: 2017729857}
@@ -8220,7 +8221,7 @@ MonoBehaviour:
   audioSource: {fileID: 1163630034}
   pointsText: {fileID: 1711634657}
   livesText: {fileID: 0}
-  points: 6
+  points: 0
 --- !u!4 &1163630036
 Transform:
   m_ObjectHideFlags: 0

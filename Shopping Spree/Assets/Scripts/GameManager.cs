@@ -91,9 +91,14 @@ public class GameManager : MonoBehaviour
             isGameActive = false;
             endScreen.SetActive(true);
         }
-        if (points == 11)
+        if (points == 9)
         {
-            StartCoroutine(WaitAndLoad());
+            AddPoints(1);
+            SceneManager.LoadScene("Level2");
+            audioSource.Stop();
+            inLevel2 = true;
+            audioSource.clip = music[3];
+            audioSource.Play();
         }
     }
 
@@ -101,16 +106,6 @@ public class GameManager : MonoBehaviour
     {
         lives--;
         livesText.text = "x " + lives;
-    }
-
-    IEnumerator WaitAndLoad()
-    {
-        yield return new WaitForSeconds(1);
-        audioSource.Stop();
-        inLevel2 = true;
-        SceneManager.LoadScene("Level2");
-        audioSource.clip = music[3];
-        audioSource.Play();
     }
 
 }
