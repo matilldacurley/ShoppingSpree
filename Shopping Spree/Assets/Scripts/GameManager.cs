@@ -7,7 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
-    private bool isGameActive = false;
+    public bool isGameActive = false;
     public int lives = 3;
     public GameObject titleScreen;
     public GameObject gameOverScreen;
@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
         gameOverScreen.SetActive(false);
         titleScreen.SetActive(true);
+        //audioSource.
+        Debug.Log(music[0].name);
         audioSource.clip = music[0];
         audioSource.Play();
     }

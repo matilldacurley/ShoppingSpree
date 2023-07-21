@@ -128,6 +128,7 @@ MonoBehaviour:
   bar: {fileID: 8439747842043647964}
   thoughtBubble: {fileID: 4357058181093396153}
   collected: 0
+  value: 1
 --- !u!114 &-5102769324768527677
 MonoBehaviour:
   m_ObjectHideFlags: 0
