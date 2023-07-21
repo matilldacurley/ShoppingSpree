@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
     public bool isGameActive = false;
+    public bool inLevel2 = false;
     public int lives = 3;
     public GameObject titleScreen;
     public GameObject gameOverScreen;
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     public AudioClip[] music;
     public AudioSource audioSource;
     public TextMeshProUGUI pointsText;
+    public TextMeshProUGUI livesText;
     public int points = 0;
 
     // Start is called before the first frame update
@@ -27,8 +29,16 @@ public class GameManager : MonoBehaviour
         gameOverScreen.SetActive(false);
         endScreen.SetActive(false);
         titleScreen.SetActive(true);
-        audioSource.clip = music[0];
-        audioSource.Play();
+        if (inLevel2)
+        {
+            audioSource.clip = music[3];
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.clip = music[0];
+            audioSource.Play();
+        }
     }
 
     public void AddPoints(int numPoints)
@@ -51,10 +61,6 @@ public class GameManager : MonoBehaviour
             audioSource.clip = music[1];
             audioSource.Play();
         }
-        if(Input.GetKeyDown(KeyCode.Backspace))
-        {
-            lives--;
-        }
         if(lives <= 0 && isGameActive)
         {
             audioSource.Stop();
@@ -74,10 +80,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LoseLives()
+    {
+        lives--;
+        livesText.text = "x " + lives;
+    }
+
     IEnumerator WaitAndLoad()
     {
         yield return new WaitForSeconds(1);
         audioSource.Stop();
+        inLevel2 = true;
         SceneManager.LoadScene("Level2");
         audioSource.clip = music[3];
         audioSource.Play();
