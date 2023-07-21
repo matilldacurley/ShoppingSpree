@@ -37,7 +37,7 @@ public class ItemController : MonoBehaviour
     {
         if (other.CompareTag("SpawnReject") && !isThrown)
         {
-            Vector2 pos = new Vector2(Random.Range(-1.84f, 2.6f), Random.Range(-1.2f, 1.2f));
+            Vector2 pos = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
             transform.position = pos;
         }
         else if(other.CompareTag("SpawnReject") && isThrown)

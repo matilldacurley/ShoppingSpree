@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         gameManager = this;
         pointsText.text = "x " + points;
+        livesText.text = "x " + lives;
         isGameActive = false;
         gameOverScreen.SetActive(false);
         endScreen.SetActive(false);
@@ -97,8 +98,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Level2");
             audioSource.Stop();
             inLevel2 = true;
-            audioSource.clip = music[3];
-            audioSource.Play();
         }
     }
 
