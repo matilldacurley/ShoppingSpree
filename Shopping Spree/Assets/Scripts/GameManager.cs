@@ -62,5 +62,15 @@ public class GameManager : MonoBehaviour
             audioSource.clip = music[2];
             audioSource.Play();
         }
+        if(points == 6)
+        {
+            StartCoroutine(WaitAndLoad());
+        }
+    }
+
+    IEnumerator WaitAndLoad()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Level2");
     }
 }
