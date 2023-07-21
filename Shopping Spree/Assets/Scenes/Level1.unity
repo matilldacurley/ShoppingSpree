@@ -12238,6 +12238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameActive: 0
+  GameOver: 0
   inLevel2: 0
   lives: 3
   titleScreen: {fileID: 563971530}
