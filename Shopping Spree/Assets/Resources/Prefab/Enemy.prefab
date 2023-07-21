@@ -212,7 +212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9199850007552811130, guid: 9b7e81c3b7c806249bc69089515a3c69, type: 3}
       propertyPath: max_time
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9199850007552811131, guid: 9b7e81c3b7c806249bc69089515a3c69, type: 3}
       propertyPath: m_RootOrder

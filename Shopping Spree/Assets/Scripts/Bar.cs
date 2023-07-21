@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Bar : MonoBehaviour
 {
     public GameObject fill;
-    public float max_time = 15.0f;
+    public float max_time = 13.0f;
     public float time_remaining;
     public Vector2 startSize;
     public int maxValue;

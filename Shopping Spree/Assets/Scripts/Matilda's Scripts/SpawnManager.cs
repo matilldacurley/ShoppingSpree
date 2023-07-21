@@ -9,7 +9,7 @@ public class SpawnManager : MonoBehaviour
     public float spawnRange = 1f;
     public int enemyCount;
     public int waveNumber = 1;
-    public float timePerWave = 10f;
+    public float timePerWave = 8f;
     public Transform spawnPos;
     
 
