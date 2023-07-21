@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Matilda C..unity
+    guid: 159190ee5d0b8408e80e0ba3373b546b
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: e2ab9e6aadfd04c53a64d8195184f873
   m_configObjects: {}

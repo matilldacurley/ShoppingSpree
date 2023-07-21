@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
             audioSource.clip = music[2];
             audioSource.Play();
         }
-        if(points == 6)
+        if(points == 9)
         {
             StartCoroutine(WaitAndLoad());
         }
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator WaitAndLoad()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Level2");
     }
 }
