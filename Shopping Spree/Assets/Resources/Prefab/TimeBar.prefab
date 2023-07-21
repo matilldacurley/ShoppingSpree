@@ -186,5 +186,5 @@ MonoBehaviour:
   max_time: 10
   time_remaining: 0
   startSize: {x: 0.1507756, y: 8.558614}
-  maxValue: 10
+  maxValue: 5
   currentValue: 0.1

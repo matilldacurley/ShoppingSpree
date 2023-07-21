@@ -7,8 +7,11 @@ public class CustomerControl : MonoBehaviour
     public GameObject wantItem;
     public GameObject bar;
     public GameObject thoughtBubble;
+    public GameObject fire;
     public bool collected = false;
     public int value = 1;
+    public bool fire_on = false;
+    public GameObject mad;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +31,8 @@ public class CustomerControl : MonoBehaviour
             Destroy(gameObject);
             Destroy(other.gameObject);
             GameManager.gameManager.AddPoints(value);
-
+            collected = true;
         }
-
     }
 
 
@@ -51,6 +53,7 @@ public class CustomerControl : MonoBehaviour
     {
         if(transform.GetChild(0).GetComponent<Bar>().time_remaining <= 0)
         {
+            Instantiate(mad, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3076027724399803688}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,10 +48,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79e42e3af07f1743907e5fb0bcd576b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwPoint: {fileID: 0}
+  ItemsCollected: []
+  spawnPoint: {fileID: 0}
   baseRunSpeed: 20
   cartSpeed: 2.5
-  bulletSpeed: 0.75
+  bulletTarget: {x: 0, y: 0, z: 0}
+  isCarting: 0
+  Items: []
+  invFull: 0
+  anim: {fileID: 0}
 --- !u!212 &6657120598443274130
 SpriteRenderer:
   m_ObjectHideFlags: 0
