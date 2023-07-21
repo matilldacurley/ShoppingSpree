@@ -8565,7 +8565,7 @@ MonoBehaviour:
   music: []
   audioSource: {fileID: 1163630034}
   pointsText: {fileID: 1711634657}
-  points: 0
+  points: 6
 --- !u!4 &1163630036
 Transform:
   m_ObjectHideFlags: 0
@@ -9197,7 +9197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1412768605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9878,7 +9878,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: press [r] to reset
+  m_Text: press [space] to replay
 --- !u!222 &1521272739
 CanvasRenderer:
   m_ObjectHideFlags: 0
