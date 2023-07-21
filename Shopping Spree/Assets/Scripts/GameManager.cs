@@ -95,8 +95,9 @@ public class GameManager : MonoBehaviour
             audioSource.clip = music[2];
             audioSource.Play();
         }
-        if (PointsManager.pointsManager.points == 20)
+        if (PointsManager.pointsManager.points == 19)
         {
+            AddPoints(1);
             audioSource.Stop();
             isGameActive = false;
             GameOver = true;

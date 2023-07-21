@@ -6,7 +6,7 @@ public class Mand_enemy : MonoBehaviour
 {
     public GameObject player;
     public Rigidbody2D rb;
-    public float speed = 0.5f;
+    public float speed = 1f;
     private Animator anim;
     // Start is called before the first frame update
     void Start()
